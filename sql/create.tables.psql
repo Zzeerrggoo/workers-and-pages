@@ -1,0 +1,29 @@
+
+CREATE TABLE workers (
+    "id" serial PRIMARY KEY,
+    "age" integer,
+    "name" varchar(100),
+    "salary" decimal(20,2) 
+);
+
+
+INSERT INTO workers ("age", "name", "salary")
+VALUES 
+(24,'Ivan Ivanov', 1),
+(24,'Ivanna Ivanova', 1),
+(25,'Vasilisa Petrova', 300),
+(25,'Vasya Petrov', 300),
+(30,'Karl Karleone',1),
+(320,'Karla Karleone',1);
+
+
+
+CREATE TABLE pages (
+    "id" serial PRIMARY KEY,
+    "author" varchar(100),
+    "article" text
+);
+
+INSERT INTO pages ("author", "article") VALUES 
+('Danissimo Danissimov', 'Some text woth the word element Rrrrr'),
+('Ibragim Ibragimovich','Some text, maybe I maybe candy');

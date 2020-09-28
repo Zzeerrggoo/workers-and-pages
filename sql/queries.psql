@@ -1,0 +1,49 @@
+/*Get first 6 workers*/
+SELECT * FROM workers 
+LIMIT 6;
+
+
+/*Get 3 workers from the second */
+SELECT * FROM workers 
+LIMIT 3
+OFFSET 1;
+
+
+/*Get workers and sort them by salary ASC*/
+SELECT * FROM workers
+ORDER BY salary ;
+
+
+/*Get workers and sort them by salary DESC*/
+SELECT * FROM workers
+WHERE id BETWEEN 2 and 6
+ORDER BY age;
+
+
+/*Get count of workers*/
+SELECT count(*) FROM workers;
+
+
+/*Get workers with salary 300*/
+SELECT count(*) FROM workers
+WHERE salary = 300;
+
+
+/*Get rows where age starts from 3 and one digit after it*/
+SELECT * FROM workers
+WHERE CAST(age AS varchar) LIKE '3_';
+
+
+/*Select workers whos names ends with some letter*/
+SELECT * FROM workers
+WHERE name LIKE '%l %';
+
+
+/*Get authors whos surenames ends with 'ov'*/
+SELECT * FROM pages 
+WHERE author LIKE '%ov';
+
+
+/*Select rows with the word 'element' in article*/
+SELECT  * FROM pages 
+WHERE article LIKE '%element%';
